@@ -1,0 +1,21 @@
+# Project Name
+Documentation Templater
+
+# Version
+1.0.0
+
+# Page Title
+Empty Table
+
+### Begin Table
+
+	# Heading
+	Col 1
+
+	# Heading
+	Col 2
+
+	# Heading
+	Col 3
+
+### End Table

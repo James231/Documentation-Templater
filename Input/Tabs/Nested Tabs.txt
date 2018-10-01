@@ -1,0 +1,138 @@
+# Project Name
+Documentation Templater
+
+# Version
+1.0.0
+
+# Page Title
+Nested Tabs
+
+
+
+## Begin Section
+
+	# Content
+	Click 'Tab Heading 1' below and keep going. This page shows you can nest tabs (and anything else) within tabs.
+
+## End Section
+
+
+### Begin Tabs
+
+	## Begin Tab
+
+		# Tab Heading
+		Tab Heading 1
+
+		# Begin Content
+
+			## Begin Section
+
+				# Heading
+				Section Heading
+
+				# Content
+				Some Text
+
+			## End Section
+
+			### Begin Tabs
+
+				## Begin Tab
+
+					# Tab Heading
+					Tab Heading 1
+
+					# Begin Content
+
+						## Begin Section
+
+							# Heading
+							Section Heading
+
+							# Content
+							Some Text
+
+						## End Section
+
+						### Begin Tabs
+
+							## Begin Tab
+
+								# Tab Heading
+								Tab Heading 1
+
+								# Begin Content
+
+									## Begin Section
+
+										# Heading
+										Section Heading
+
+										# Content
+										Some Text
+
+									## End Section
+
+									### Begin Tabs
+
+										## Begin Tab
+
+											# Tab Heading
+											Tab Heading 1
+
+											# Begin Content
+
+												## Begin Section
+
+													# Heading
+													You reached the end!!!
+
+													# Content
+													Congratulations. Your reward is no more tabs.
+
+											# End Content
+
+										## End Tab
+
+									### End Tabs
+
+								# End Content
+
+							## End Tab
+
+						### End Tabs
+
+					# End Content
+
+				## End Tab
+
+			### End Tabs
+
+		# End Content
+
+	## End Tab
+
+	## Begin Tab
+
+		# Tab Heading
+		Tab Heading 2
+
+		# Begin Content
+
+		# End Content
+
+	## End Tab
+
+	## Begin Tab
+
+		# Tab Heading
+		Tab Heading 3
+
+		# Begin Content
+
+		# End Content
+
+	## End Tab
+
+### End Tabs

@@ -1,0 +1,118 @@
+# Project Name
+Documentation Templater
+
+# Version
+1.0.0
+
+# Page Title
+Simple Tabs
+
+
+
+## Begin Section
+
+	# Content
+	Below are some nice simple tabs!
+
+## End Section
+
+
+
+### Begin Tabs
+
+	## Begin Tab
+
+		# Tab Heading
+		Section Tab
+
+		# Begin Content
+
+			## Begin Section
+
+				# Heading
+				This tab contains a section!
+
+				# Content
+				Isn't that nice.
+
+			## End Section
+
+		# End Content
+
+	## End Tab
+
+	## Begin Tab
+
+		# Tab Heading
+		Empty Tab
+
+		# Begin Content
+
+		# End Content
+
+	## End Tab
+
+	## Begin Tab
+
+		# Tab Heading
+		Table Tab
+
+		# Begin Content
+
+			### Begin Table
+
+				# Heading
+				Col 1
+
+				# Heading
+				Col 2
+
+				# Heading
+				Col 3
+
+				## Begin Row
+
+					# Cell
+					Cell 1
+
+					# Cell
+					Cell 2
+
+					# Cell
+					Cell 3
+
+				## End Row
+
+				## Begin Row
+
+					# Cell
+					Cell 4
+
+					# Cell
+					Cell 5
+
+					# Cell
+					Cell 6
+
+				## End Row
+
+				## Begin Row
+
+					# Cell
+					Cell 7
+
+					# Cell
+					Cell 8
+
+					# Cell
+					Cell 9
+
+				## End Row
+
+			### End Table
+
+		# End Content
+
+	## End Tab
+
+### End Tabs

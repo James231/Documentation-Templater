@@ -1,0 +1,149 @@
+# Project Name
+Documentation Templater
+
+# Version
+1.0.0
+
+# Page Title
+Multiple Tables
+
+### Begin Table
+
+	# Heading
+	Col 1
+
+	# Heading
+	Col 2
+
+	# Heading
+	Col 3
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+### End Table
+
+
+### Begin Table
+
+	# Heading
+	Col 1
+
+	# Heading
+	Col 2
+
+	# Heading
+	Col 3
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+### End Table
+
+
+
+## Begin Section
+
+	# Heading
+	And lets have one more ...
+
+## End Section
+
+
+### Begin Table
+
+	# Heading
+	Col 1
+
+	# Heading
+	Col 2
+
+	# Heading
+	Col 3
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+	## Begin Row
+
+		# Cell
+		Cell 1
+
+		# Cell
+		Cell 2
+
+		# Cell
+		Cell 3
+
+	## End Row
+
+### End Table
