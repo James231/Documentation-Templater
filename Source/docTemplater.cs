@@ -3,53 +3,18 @@ using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 
-
-
-/*
-
-Debugging can be done using the VS command prompt. add -debug flag when compiling
-
-
-
-finish the "Needs finishing"s with more content (tabs, tables, etc)
-
-Nested tabs not working.
-Problem is occuring as when the code sees ### Begin Tabs it looks for the next ### End Tabs
-   but with nested tabs there will be another ### Begin Tabs and ### End Tabs first which it should ignore
-
-
-checkout function "CreateFileMenuContent" and handle layers
-
-Should be able to identify a certain tab as active
-    separate templates for active tab?
-
-
-Sidenav:
-Check subsubdirectories are working
-Have an active tag thingy on the active menu item (different files for active and not active)
-the active menu item should have directory menus expanded
-checkout function "CreateFileMenuContent" and handle layers
-
-*/
-
-
-
-
 namespace apitosandboxtool
 {
 	class MainClass
 	{
 		public static string[] templateFileNames = new string[12] {"page_template.html", "section_content.html", "section_header.html", "sidenav_directory.html", "sidenav_page.html", "table_cell.html", "table_heading.html", "table_parent.html", "table_row.html", "tabs_content.html", "tabs_parent.html", "tabs_tab.html"};
 
-		// directorys do not end in a slash !!!
 		public static string dirPath;
 		public static string outputPath;
 		public static string templatePath;
 
-		// class representing the root directory. Directories will only contain the txt/html files we are dealing with
 		public static MyDirectory root;
 
-		// Counts the number of sections/tabs/tables/HTMLs we are using
 		public static int baseItemNumber = 1;
 
 
@@ -103,8 +68,6 @@ namespace apitosandboxtool
 		public static List<BaseContent> ParseStringToContent (string text) {
 			string[] lines = text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 
-			// In this list we'll have all consecutive content lines joined together
-			// so the strings should alternate between identifiers and content
 			List<string> parts = new List<string>();
 
 			string curPart = "";
@@ -354,15 +317,6 @@ namespace apitosandboxtool
 					baseItemNumber++;
 					return tableString;
 				}
-
-
-				///////////////////////////////////////////////////////////////////////////////
-				// Needs finishing
-				// If you need to get the string for general content (which may contain sections/tables/tabs etc)
-				//      then use the GetMainContent function (passing in the children as the argument)
-				//////////////////////////////////////////////////////////////////////////////
-
-
 				return "";
 			}
 		}

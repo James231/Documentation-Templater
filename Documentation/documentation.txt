@@ -3,7 +3,7 @@ Thanks for downloading Documentation Templater!
 It is current functioning but incomplete. There is much more content to come!
 
 See the readme.md for more info (or view it on GitHub) here:
-https://github.com/james231/documentation-templater
+https://github.com/james231/documentation-templater.git
 
 Before using it for your own project, take a look at the .txt files in Input folder. These contain the page content generate the .html files in the 'Output' folder. Make sure you view the 'Output' HTML files to see what the tool is currenlty capable of.
 The rest of the HTML (styling and layout) comes from the 'Template' folder.

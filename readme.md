@@ -6,14 +6,14 @@ It comes with an example template using [Bootstrap 4](https://getbootstrap.com/)
 
 Note: This is project is still WIP. You may encounter bugs. I plan on adding better documentation for using the tool, supporting more page elements, more example templates, and possibly an interface soon.
 
-<img src="https://i.imgur.com/plBgyrW.png" alt="drawing" width="700" height="500" />
+![Image](Documentation/images/main.png)
 
 
 ## Install
 
 ### Windows
 Clone the repository using:  
-`git clone https://github.com/james231/documentation-templater`  
+`git clone https://github.com/james231/documentation-templater.git`  
 To generate the documentation you need to execute the `docTemplater.exe`. This is built as a Windows Console Appliction so can be executed by double clicking on through the Command Line.  
 If you want to rebuild the application from the source file `Source/docTemplater.cs`, you can use the lates Mono or .NET C# compilers.
 
