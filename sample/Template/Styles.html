@@ -1,0 +1,156 @@
+<TName name="styles"/>
+
+<style type="text/css">
+
+body {
+    max-width: 100%;
+}
+
+*, p, h1, h2, h3, h4, h5, h6 {
+   font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, strong {
+    color: #4a4a4a !important;
+}
+
+h1, h2, h3 {
+    font-weight: 500 !important;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+h1 {
+    font-size: 3em !important;
+}
+
+h2 {
+    font-size: 2.5em !important;
+}
+
+h3 {
+    font-size: 1.9em !important;
+}
+
+h4 {
+    font-size: 1.5em !important;
+    font-weight: 400 !important;
+}
+
+h5 {
+    font-size: 1.1em !important;
+    font-weight: 400 !important;
+}
+
+h6 {
+    font-size: 0.9em !important;
+    color: #818181;
+    font-weight: 300 !important;
+}
+
+table {
+    width: auto !important;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+td, th {
+    border-width: 1px !important;
+}
+
+th {
+    border-bottom: 3px solid #dbdbdb !important;
+}
+
+tbody tr:not(.is-selected):nth-child(2n) {
+    background-color: #fafafa;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-parent {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-list {
+    margin-right: 0px !important;
+}
+
+#flex-parent-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0 !important;
+}
+
+#sidenav-root {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.content-container {
+    width: 88%;
+    margin: 3em auto 3em auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidenav {
+    z-index: 10;
+    transition: width 0.3s;
+    top:0;
+    bottom: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #F2F2F2;
+}
+
+#sidenav-back {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    background-color: #000000;
+    opacity: 0;
+    z-index: 9;
+    transition: opacity 0.2s;
+    display: none;
+}
+
+#nav-heading {
+    margin-left: 16px;
+    font-size: 20px !important;
+    font-weight: 500;
+}
+
+#sidenav-toggle-btn {
+    width: 50px;
+    margin: 5px;
+    display: inline-block;
+}
+
+#page-title-parent {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+</style>

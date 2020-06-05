@@ -1,0 +1,37 @@
+<PProperty name="PageTitle" value="Templates"/>
+<PProperty name="Author" value="Jam-Es.com"/>
+<PProperty name="LastUpdated" value="2nd June 2020"/>
+<PProperty name="NumMinutesToRead" value="2"/>
+
+<card>
+    <p>
+        Templates allow you to avoid duplicating code in pages. They are similar to using custom elements in JavaScript frameworks like Angular and React. They work both in Markdown and Html pages.
+    </p>
+
+    <p>
+        For example using the code <code>&lt;card&gt; ... some content ... &lt;\card&gt;</code> produces a material design styled card which is used on this page containing this text.
+    </p>
+
+    <p>
+        The code for the entire <code>&lt;card&gt;</code> template looks like this:
+    </p>
+
+    <pre><code>&lt;TName name="card"/&gt;
+
+&lt;div class="card" style="padding: 20px; margin-top: 28px; margin-bottom: 20px;"&gt;
+  @ChildContent;
+&lt;/div&gt;</code></pre>
+
+</card>
+
+<p style="margin-top: 40px">
+    Other than the main content text you see in these pages, everything else in this documentation is created using templates. This makes the documentation fully customizable. You can edit the templates to adjust the styles or layouts, or create your own template from scratch. For example, this template was made using the CSS framework Bulma, but you could write your own using Bootstrap if you prefer.
+</p>
+
+<p>
+    To create your own template you just need to create a HTML file in the Templates directory like the one shown above.
+</p>
+
+<p>
+    Templates can also accept parameters like this <code>&lt;mytemplate myproperty="myvalue"/&gt;</code> and have a few other features. To see all the features templates support, please see the GitHub Wiki.
+</p>

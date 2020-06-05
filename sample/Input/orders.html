@@ -1,0 +1,30 @@
+<PProperty name="PageTitle" value="Page Orders"/>
+<PProperty name="Author" value="Jam-Es.com"/>
+<PProperty name="LastUpdated" value="2nd June 2020"/>
+<PProperty name="NumMinutesToRead" value="2"/>
+
+<p>
+    You may have noticed the list of pages in the sidenav are in a sensible order. When iterating over all subfolders/pages in the templates, by default folders are displayed first, followed by pages and the order depends on the order they are found by the tool. But if you want to change this order, you need to specify the correct ordering yourself.
+</p>
+
+<h4 style="margin-top: 40px;">How to Order Pages</h4>
+
+<p>
+    Ordering pages is done on a 'per folder' basis. Within the <code>Input</code> directory find the folder containing the pages and subfolders you wish to order. Within this folder create a text file called <code>order.config</code>. For example this documentation has the following <code>order.config</code> file directly inside the <code>Input</code> folder:
+</p>
+
+<pre><code>1 index.html
+2 pages.html
+3 myhtml.html
+4 mymarkdown.md
+5 templates.html
+6 Example Pages
+7 orders.html</code></pre>
+
+<p>
+    You'll notice the file consists of 2 columns separated by a space. The first column asigns an order number to each item (file or subfolder), and the second column specifies the item path (file name or subfolder name). When iterating through the files/folders the tool starts with the smallest order number and finishes with the largest.
+</p>
+
+<p>
+    You can also override these orders on a 'per page' basis. See the GitHub Wiki for more info.
+</p>

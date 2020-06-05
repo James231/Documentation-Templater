@@ -1,0 +1,43 @@
+<TName name="sidenav"/>
+<TProperty name="LinkPrefix"/>
+
+<div id="sidenav-root">
+    <aside id="sidenav" class="menu">
+            <div id="sidenav-content" style="padding: 10px; margin-bottom: 30px;">
+                <p class="menu-label">
+                    Pages
+                </p>
+                <ul class="menu-list">
+                <ForAllFolders>
+                    <ForeachSubFolder>
+                        <IsThisFolder>
+                            <li><a id="folder-@SubFolder.Layer;-@SubFolder.Name;" class="is-this-sidenav-folder"><i id="folder-downar-@SubFolder.Layer;-@SubFolder.Name;" class="fas fa-caret-down" style="margin-right: 6px;"></i><i id="folder-upar-@SubFolder.Layer;-@SubFolder.Name;" class="fas fa-caret-up" style="margin-right: 6px;"></i>@SubFolder.Name;</a></li>
+                        </IsThisFolder>
+                        <IsNotThisFolder>
+                            <li><a id="folder-@SubFolder.Layer;-@SubFolder.Name;"><i id="folder-downar-@SubFolder.Layer;-@SubFolder.Name;" class="fas fa-caret-down" style="margin-right: 6px;"></i><i id="folder-upar-@SubFolder.Layer;-@SubFolder.Name;" class="fas fa-caret-up" style="margin-right: 6px;"></i>@SubFolder.Name;</a></li>
+                        </IsNotThisFolder>
+                        <li id="folder-content-@SubFolder.Layer;-@SubFolder.Name;" style="overflow: hidden; -ms-transition: height .25s; -o-transition: height .25s; -webkit-transition: height .25s; transition: height .25s; overflow: hidden;">
+                            <ul class="menu-list">
+                                @SubFolder.Recursive;
+                            </ul>
+                        </li>
+                    </ForeachSubFolder>
+                    <ForeachPage>
+                        <IsThisPage>
+                            <li><a class="is-active" href="@Template.LinkPrefix;@SubPage.Link;">@SubPage.PageTitle;</a></li>
+                        </IsThisPage>
+                        <IsNotThisPage>
+                            <li><a href="@Template.LinkPrefix;@SubPage.Link;">@SubPage.PageTitle;</a></li>
+                        </IsNotThisPage>
+                    </ForeachPage>
+                </ForAllFolders>
+                </ul>
+            </div>
+        </aside>
+    <div id="sidenav-back"></div>
+    <div id="flex-parent-container">
+        <div class="content-container">
+            @ChildContent;
+        </div>
+    </div>
+</div>

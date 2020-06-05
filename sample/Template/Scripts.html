@@ -1,0 +1,139 @@
+<TName name="scripts"/>
+
+<script type="text/javascript">
+
+    // Its fine to write comments here because JS minification will remove them
+
+    // Is the Sidenav open
+    var open = false;
+
+    // Dictionary for folders in sidenav. Each entry has a key which is the id of the element containing the content of the sidenav folder's dropdown. And the values are booleans. True if the drop down has been opended, false otherwise.
+    var sidenavFolderExpandedContent = {};
+
+    // The following code makes the sidenav start in a closed state on smaller screens
+    //   and makes it absolute (like an overlay) on even smaller screens
+    var isSideNavAbsoute = false;
+
+    if (window.innerWidth < 600) {
+        var sidenavElmt = document.getElementById("sidenav");
+        sidenavElmt.style.position = "absolute";
+        sidenavElmt.style.overflowY = "scroll";
+        isSideNavAbsoute = true;
+        var sidenavBackground = document.getElementById("sidenav-back");
+        sidenavBackground.addEventListener('transitionend', () => {
+            if (open == false) {
+                sidenavBackground.style.display = "none";
+            }
+        });
+        sidenavBackground.onclick = () => ShowHideSidenav();
+    }
+
+    if (window.innerWidth < 800) {
+        closeNav();
+    } else {
+        openNav();
+    }
+
+    /**
+     * Toggles whether the sidenav is open or not.
+     */
+    function ShowHideSidenav() {
+        if (open) {
+            closeNav();
+        } else {
+            openNav();
+        }
+    }
+
+
+    /**
+     * Opens the sidenav.
+     */
+    function openNav() {
+        open = true;
+        if (isSideNavAbsoute) {
+            // For small screens when using absolute position (overlay), may the dark background fade in
+            var sidenavBackground = document.getElementById("sidenav-back");
+            sidenavBackground.style.display = "block";
+            sidenavBackground.style.opacity = 0.4;
+        }
+        var sidenav = document.getElementById("sidenav");
+        sidenav.style.width = Math.min(300, screen.width) + "px";
+        document.getElementById("sidenav-content").style.width = Math.min(300, screen.width) + "px";
+    }
+
+    /**
+     * Closes the sidenav.
+     */
+    function closeNav() {
+        open = false;
+        if (isSideNavAbsoute) {
+            var sidenavBackground = document.getElementById("sidenav-back");
+            sidenavBackground.style.opacity = 0;
+        }
+        var sidenav = document.getElementById("sidenav");
+        sidenav.style.width = "0";
+        document.getElementById("sidenav-content").style.width = Math.min(300, screen.width) + "px";
+    }
+
+    /**
+     * Given information about a dropdown folder in the sidenav, toggle whether it is open or closed.
+     * @param  {string} contentId   Id of the parent of the content the dropdown contains.
+     * @param  {string} upArrowId   Id of the up arrow on the sidenav folder to show/hide it.
+     * @param  {string} downArrowId Id of the down arrow on the sidenav folder to show/hide it.
+     */
+    function toggleDropDown(contentId, upArrowId, downArrowId) {
+        var el = document.getElementById(contentId);
+        if (sidenavFolderExpandedContent[contentId]) {
+            document.getElementById(upArrowId).style.display = "none";
+            document.getElementById(downArrowId).style.display = "inline-block";
+            sidenavFolderExpandedContent[contentId] = false;
+            // Need a short delay before collapsing the folder, as the transition won't work if the height is auto
+            // Need to convert the height into pixels first.
+            el.style.height = el.scrollHeight + "px";
+            setTimeout(() => {
+                el.style.height = "0px";
+            }, 10);
+        } else {
+            document.getElementById(upArrowId).style.display = "inline-block";
+            document.getElementById(downArrowId).style.display = "none";
+            sidenavFolderExpandedContent[contentId] = true;
+            el.style.height = el.scrollHeight + "px";
+        }
+    }
+</script>
+
+<!-- Here we add some JS code for each folder in the sidenav to get the animated drop downs working -->
+<ForAllFolders>
+    <ForeachSubFolder>
+        <script type="text/javascript">
+            // Add onclick event to folder dropdown header to call the toggleDropDown function with the correct ids.
+            var colHeader = document.getElementById('folder-@SubFolder.Layer;-@SubFolder.Name;');
+            colHeader.onclick = () => toggleDropDown('folder-content-@SubFolder.Layer;-@SubFolder.Name;', "folder-upar-@SubFolder.Layer;-@SubFolder.Name;", "folder-downar-@SubFolder.Layer;-@SubFolder.Name;");
+            var colContent = document.getElementById('folder-content-@SubFolder.Layer;-@SubFolder.Name;');
+
+            // Expand the folder to start with if it is a parent (ancestor) of the open page
+            if (colHeader.classList.contains("is-this-sidenav-folder")) {
+                sidenavFolderExpandedContent['folder-content-@SubFolder.Layer;-@SubFolder.Name;', true];
+                document.getElementById("folder-upar-@SubFolder.Layer;-@SubFolder.Name;").style.display = "inline-block";
+                document.getElementById("folder-downar-@SubFolder.Layer;-@SubFolder.Name;").style.display = "none";
+            } else {
+                sidenavFolderExpandedContent['folder-content-@SubFolder.Layer;-@SubFolder.Name;', false];
+                document.getElementById("folder-upar-@SubFolder.Layer;-@SubFolder.Name;").style.display = "none";
+                document.getElementById("folder-downar-@SubFolder.Layer;-@SubFolder.Name;").style.display = "inline-block";
+                colContent.style.height = "0px";
+            }
+
+            // When a dropdown has been expanded and the animation completed, set height of the content to "auto"
+            //   because if the height remains a fixed pixel value,
+            //     then opening sub dropdowns (within this dropdown) won't increase the height of the parent element correctly
+            colContent.addEventListener('transitionend', () => {
+                if (sidenavFolderExpandedContent['folder-content-@SubFolder.Layer;-@SubFolder.Name;'] == true) {
+                    document.getElementById('folder-content-@SubFolder.Layer;-@SubFolder.Name;').style.height = "auto";
+                }
+            });
+        </script>
+        <!-- We add Recursive here to make sure the code above is added for all sub folders (so all folders in total) -->
+        @SubFolder.Recursive;
+    </ForeachSubFolder>
+</ForAllFolders>

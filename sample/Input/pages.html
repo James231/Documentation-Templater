@@ -1,0 +1,42 @@
+<PProperty name="PageTitle" value="Pages"/>
+<PProperty name="Author" value="Jam-Es.com"/>
+<PProperty name="LastUpdated" value="2nd June 2020"/>
+<PProperty name="NumMinutesToRead" value="2"/>
+
+<p>
+    To use the Documentation Templater Tool, you simply provide it with a list of pages for your site. Each page is represented by a Markdown or Html file. Your pages should only contain very basic page content.
+</p>
+
+<p>
+    The tool then converts your code into pure Html which it inserts into a template Page. The template contains code for styles and layouts. You can also create your own templates to add your own 'controls' which is great for avoiding duplicating code. Templates keep your page files short and simple, while allowing you to customize the full code for your documentation website should you need to.
+</p>
+
+<h3>Project Structure</h3>
+
+<p>
+    The basic folder structure for a Documentation Templater project looks like this:
+</p>
+
+<pre><code>. Root Folder
+├── Input
+|  ├── page1.html
+|  ├── page2.md
+|  └── Page Subdirectory
+|     └── page3.html
+├── Output
+|  ├── page1.html
+|  ├── page2.html
+|  └── page+subdirectory
+|     └── page3.html
+├── Template
+|  └── ...
+└── DocumentationTemplater.exe
+</code></pre>
+
+<p>
+    You create your Html and Markdown pages inside the <code>Input</code> folder. Run the <code>DocumentationTemplater.exe</code> then see the results in the <code>Output</code> folder. The contents of <code>Output</code> folder can be copied directly to your web hosts public folder to be served. Simple.
+</p>
+
+<p>
+    Note: The subdirectories in the Input folder are what give the subfolder structure in the sidenav. Although the sidenav is just one example of how the folder structure can be used, and you can achieve many more using templates.
+</p>
