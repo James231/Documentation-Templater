@@ -9,15 +9,15 @@ Included templates generate a clean, responsive, mobile-compatible documentation
 The tool is cross-platform written using .NET Core 3.1.
 
 Features:
-- Write short documentation pages in Html or Markdown
-- Supports all the common markdown features. Add more by installing Markdig extensions
-- Create custom controls like `<card property="value">...</card>` similar to JS Frameworks like Anuglar and React
-- Comes with a modern and responsive example template
-- Sidebar navigation supported
-- Minifies output HTML, CSS and JavaScript for fast load times
-- Output is ready to copy into a public folder for hosting
-- Output is static so free hosting is availalbe on GitHub Pages, GitLab Pages or Netlify
-- Very fast documentation build times which increase linearly with the number of pages
+*   Write short documentation pages in Html or Markdown
+*   Supports all the common markdown features. Add more by installing Markdig extensions
+*   Create custom controls like `<card property="value">...</card>` similar to JS Frameworks like Anuglar and React
+*   Comes with a modern and responsive example template
+*   Sidebar navigation supported
+*   Minifies output HTML, CSS and JavaScript for fast load times
+*   Output is ready to copy into a public folder for hosting
+*   Output is static so free hosting is availalbe on GitHub Pages, GitLab Pages or Netlify
+*   Very fast documentation build times which increase linearly with the number of pages
 
 ## Using the Tool
 
@@ -28,7 +28,7 @@ To use the tool, download the latest version through [GitHub Releases](https://g
 ## Building from Source
 
 To build from source you need Visual Studio 2019 with the latest .NET Core 3 SDK. Use the following publish command to get a single file executable:
-```
+```C#
 dotnet publish -r win10-x64 -c Release -p:PublishSingleFile=true
 ```
 where you change `win10-x64` to your platform.
