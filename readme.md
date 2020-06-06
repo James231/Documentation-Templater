@@ -1,5 +1,7 @@
 # Documentation Templater V2
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/87bea31db9ff49609bf01043525fb510)](https://www.codacy.com/manual/James231/Documentation-Templater?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=James231/Documentation-Templater&amp;utm_campaign=Badge_Grade)
+
 **Note: The Wiki isn't finished yet, but will be done in a few days.**
 
 Templating engine for quickly and easily creating static web-based documentation projects. Write short and readable HTML or Markdown code containing only the important information for each page. All styling and layouts are defined in templates which can be changed to give you the full capabilities of pure HTML should you need it.
