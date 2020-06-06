@@ -12,7 +12,7 @@ namespace DocumentationTemplater
     /// <summary>
     /// Contains application entry point.
     /// </summary>
-    public class Program
+    public static class Program
     {
         /// <summary>
         /// Main entry point of the application.

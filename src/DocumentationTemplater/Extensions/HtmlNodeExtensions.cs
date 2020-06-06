@@ -19,7 +19,7 @@ namespace DocumentationTemplater.Extensions
         {
             foreach (HtmlNode childNode in node.ChildNodes)
             {
-                if (childNode.Name.ToLower() == name.ToLower())
+                if (childNode.Name.ToLower(Configuration.Culture) == name.ToLower(Configuration.Culture))
                 {
                     return childNode;
                 }

@@ -3,6 +3,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using System.Globalization;
+
 namespace DocumentationTemplater
 {
     /// <summary>
@@ -15,5 +17,7 @@ namespace DocumentationTemplater
         public static string[] NewlineChars { get; } = { "\r\n", "\n", "\r" };
 
         public static string[] RequiredTemplateFiles { get; } = { "Page.html" };
+
+        public static CultureInfo Culture { get; } = CultureInfo.InvariantCulture;
     }
 }

@@ -139,13 +139,13 @@ namespace DocumentationTemplater
             IEnumerable<HtmlNode> show, hide;
             if (currentFileInLoop == currentPageFile)
             {
-                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisPage".ToLower()));
-                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisPage".ToLower()));
+                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisPage".ToLower(Configuration.Culture)));
+                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisPage".ToLower(Configuration.Culture)));
             }
             else
             {
-                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisPage".ToLower()));
-                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisPage".ToLower()));
+                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisPage".ToLower(Configuration.Culture)));
+                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisPage".ToLower(Configuration.Culture)));
             }
 
             foreach (HtmlNode showNode in show)
@@ -197,13 +197,13 @@ namespace DocumentationTemplater
 
             if (isThisFolder)
             {
-                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisFolder".ToLower()));
-                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisFolder".ToLower()));
+                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisFolder".ToLower(Configuration.Culture)));
+                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisFolder".ToLower(Configuration.Culture)));
             }
             else
             {
-                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisFolder".ToLower()));
-                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisFolder".ToLower()));
+                hide = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsThisFolder".ToLower(Configuration.Culture)));
+                show = Utils.CloneListNotValues(doc.DocumentNode.Descendants("IsNotThisFolder".ToLower(Configuration.Culture)));
             }
 
             foreach (HtmlNode showNode in show)

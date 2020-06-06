@@ -7,6 +7,6 @@ namespace DocumentationTemplater.Models
 {
     public class SidenavElement
     {
-        public int Order { get; set; } = 0;
+        public int Order { get; set; }
     }
 }
