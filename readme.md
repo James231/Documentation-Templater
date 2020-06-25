@@ -21,7 +21,7 @@ Features:
 
 ## YouTube Tutorials
 
-[<img width="480" height="270" alt="See the First Video Tutorial on YouTube" src="http://cdn.jam-es.com/img/documentation_templater_video_thumbnail_playable.png" target="_blank"/>](https://www.youtube.com/watch?v=wbwIauMc43Y)
+[<img width="480" height="270" alt="See the First Video Tutorial on YouTube" src="https://cdn.jam-es.com/img/documentation_templater_video_thumbnail_playable.png" target="_blank"/>](https://www.youtube.com/watch?v=wbwIauMc43Y)
 
 I am working on a series of 3 YouTube tutorials:  
 - [Part 1: Downloading, Setting Up, and how to Write Content](https://www.youtube.com/watch?v=wbwIauMc43Y)
