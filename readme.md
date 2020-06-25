@@ -19,6 +19,15 @@ Features:
 *   Output is static so free hosting is availalbe on [GitHub Pages](https://pages.github.com/), [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/) or [Netlify](https://www.netlify.com/)
 *   Very fast documentation build times which increase linearly with the number of pages
 
+## YouTube Tutorials
+
+[<img width="480" height="270" alt="See the First Video Tutorial on YouTube" src="http://cdn.jam-es.com/img/documentation_templater_video_thumbnail_playable.png" target="_blank"/>](https://www.youtube.com/watch?v=wbwIauMc43Y)
+
+I am working on a series of 3 YouTube tutorials:  
+- [Part 1: Downloading, Setting Up, and how to Write Content](https://www.youtube.com/watch?v=wbwIauMc43Y)
+- Part 2: Changing styles/layouts or writing your own template from scratch - COMING SOON  
+- Part 3: Get your documentation online for free with GitLab Pages - COMING SOON  
+
 ## Using the Tool
 
 To use the tool, download the latest version through [GitHub Releases](https://github.com/James231/documentation-templater/releases). There are downloads for Windows, Mac and Linux, both including a bundled .NET Core 3.1 runtime, or without if you already have it installed.
